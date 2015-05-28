@@ -6,9 +6,9 @@
 typedef struct AVLNode_Struct
 {
 	
-	AVLNode_Struct * Parent;
-	AVLNode_Struct * Left;
-	AVLNode_Struct * Right;
+	struct AVLNode_Struct * Parent;
+	struct AVLNode_Struct * Left;
+	struct AVLNode_Struct * Right;
 	
 	int32_t Height;
 	

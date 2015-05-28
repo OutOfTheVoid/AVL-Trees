@@ -2,7 +2,8 @@
 
 #include <stddef.h>
 #include <stdlib.h>
-#include <iostream>
+#include <stdbool.h>
+#include <stdio.h>
 
 inline int32_t Max ( int32_t A, int32_t B )
 {
@@ -14,7 +15,7 @@ inline int32_t Max ( int32_t A, int32_t B )
 AVLNode_t * NewAVLNode ( uint32_t Value )
 {
 	
-	AVLNode_t * Node = reinterpret_cast <AVLNode_t *> ( malloc ( sizeof ( AVLNode_t ) ) );
+	AVLNode_t * Node = (AVLNode_t *) malloc ( sizeof ( AVLNode_t ) );
 	
 	if ( Node == NULL )
 		return NULL;
@@ -531,6 +532,6 @@ void AVLPrint ( AVLNode_t * Root )
 {
 	
 	__PrintTree ( Root );
-	std :: cout << std :: endl;
+	printf ( "\n" );
 	
 };

@@ -470,6 +470,15 @@ void AVLRemove ( AVLNode_t ** Root, AVLNode_t * Node )
 		
 	}
 	
+	if ( UnbalancedNode == * Root )
+	{
+		
+		* Root = NULL;
+		
+		return;
+		
+	}
+	
 	while ( true )
 	{
 		
